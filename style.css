@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f2f5;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.formbox {
+   
+    width: 300px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin: auto;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.toggle-button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background: #e7e9ec;
+    border: 2px solid #dfe3e8;
+    outline: none;
+    font-size: 14px;
+    color: #606770;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 0 2px;
+}
+
+.toggle-button:hover,
+#login:checked ~ .toggle-button[for="login"],
+#register:checked ~ .toggle-button[for="register"] {
+    background-color: #1877f2;
+    color: #fff;
+    border-color: #1877f2;
+}
+
+.input-field {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccd0d5;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.check-box {
+cursor: pointer;
+}
+
+span {
+color: #606770;
+font-size: 14px;
+}
+
+.submitbutton {
+width: 100%;
+padding: 15px;
+border: none;
+border-radius: 5px;
+background-color: #42b72a;
+color: #fff;
+cursor: pointer;
+font-size: 16px;
+transition: background-color 0.3s;
+}
+
+.submitbutton:hover {
+background-color: #36a420;
+}
+
+.input-field:focus {
+border-color: #1877f2;
+box-shadow: 0 0 0 2px rgba(24, 119, 242, 0.2);
+}
+
+.check-box + span {
+vertical-align: middle;
+}
+
+#login:checked ~ .input#login-form,
+#register:checked ~ .input#register-form {
+display: block;
+}
+
