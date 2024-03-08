@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+</head>
+<body>
+    <div style="width: 250px; border: 7px solid #ccc; border-radius: 5px; padding: 10px;">
+        <input type="text" id="result" readonly style="width: 100%; margin-bottom: 10px; padding: 5px; box-sizing: border-box;">
+        <div>
+            <button onclick="appendToResult('7')" style="width: 50px; height: 45px; margin-right: 5px; margin-bottom: 5px; font-size: 20px; border: 1px solid #ccc; border-radius: 5px; background-color:#cd4f41; cursor: pointer;">7</button>
+            <button onclick="appendToResult('8')" style="width: 50px; height: 45px; margin-right: 5px; margin-bottom: 5px; font-size: 20px; border: 1px solid #ccc; border-radius: 5px; background-color: #2d8077; cursor: pointer;">8</button>
+            <button onclick="appendToResult('9')" style="width: 50px; height: 45px; margin-right: 5px; margin-bottom: 5px; font-size: 20px; border: 1px solid #ccc; border-radius: 5px; background-color: #de9e46; cursor: pointer;">9</button>
+            <button onclick="appendToResult('+')" style="width: 50px; height: 45px; margin-right: 5px; margin-bottom: 5px; font-size: 20px; border: 1px solid #ccc; border-radius: 5px; background-color: 	#71afba; cursor: pointer;">+</button>
+        </div>
+        <div>
+            <button onclick="appendToResult('4')" style="width: 50px; height: 45px; margin-right: 5px; margin-bottom: 5px; font-size: 20px; border: 1px solid #ccc; border-radius: 5px; background-color: #dadce0; cursor: pointer;">4</button>
+            <button onclick="appendToResult('5')" style="width: 50px; height: 45px; margin-right: 5px; margin-bottom: 5px; font-size: 20px; border: 1px solid #ccc; border-radius: 5px; background-color: #b496bd; cursor: pointer;">5</button>
+            <button onclick="appendToResult('6')" style="width: 50px; height: 45px; margin-right: 5px; margin-bottom: 5px; font-size: 20px; border: 1px solid #ccc; border-radius: 5px; background-color: #9279c3; cursor: pointer;">6</button>
+            <button onclick="appendToResult('-')" style="width: 50px; height: 45px; margin-right: 5px; margin-bottom: 5px; font-size: 20px; border: 1px solid #ccc; border-radius: 5px; background-color: #eab7e4; cursor: pointer;">-</button>
+        </div>
+        <div>
+            <button onclick="appendToResult('1')" style="width: 50px; height: 45px; margin-right: 5px; margin-bottom: 5px; font-size: 20px; border: 1px solid #ccc; border-radius: 5px; background-color: #b2eaed; cursor: pointer;">1</button>
+            <button onclick="appendToResult('2')" style="width: 50px; height: 45px; margin-right: 5px; margin-bottom: 5px; font-size: 20px; border: 1px solid #ccc; border-radius: 5px; background-color: #ea526f; cursor: pointer;">2</button>
+            <button onclick="appendToResult('3')" style="width: 50px; height: 45px; margin-right: 5px; margin-bottom: 5px; font-size: 20px; border: 1px solid #ccc; border-radius: 5px; background-color: #9cb380; cursor: pointer;">3</button>
+            <button onclick="appendToResult('*')" style="width: 50px; height: 45px; margin-right: 5px; margin-bottom: 5px; font-size: 20px; border: 1px solid #ccc; border-radius: 5px; background-color: 	#94a89a; cursor: pointer;">*</button>
+        </div>
+        <div>
+            <button onclick="appendToResult('0')" style="width: 50px; height: 45px; margin-right: 5px; margin-bottom: 5px; font-size: 20px; border: 1px solid #ccc; border-radius: 5px; background-color: #c7ac92; cursor: pointer;">0</button>
+            <button onclick="appendToResult('.')" style="width: 50px; height: 45px; margin-right: 5px; margin-bottom: 5px; font-size: 20px; border: 1px solid #ccc; border-radius: 5px; background-color: #8b617c; cursor: pointer;">.</button>
+            <button onclick="clearResult()" style="width: 50px; height: 45px; margin-right: 5px; margin-bottom: 5px; font-size: 20px; border: 1px solid #ccc; border-radius: 5px; background-color: #8d9588; cursor: pointer;">C</button>
+            <button onclick="appendToResult('/')" style="width: 50px; height: 45px; margin-right: 5px; margin-bottom: 5px; font-size: 20px; border: 1px solid #ccc; border-radius: 5px; background-color: #ceb2b2; cursor: pointer;">/</button>
+        </div>
+    </div>
+
+    <script>
+        function appendToResult(value) {
+            document.getElementById('result').value += value;
+        }
+
+        function clearResult() {
+            document.getElementById('result').value = '';
+        }
+    </script>
+</body>
+</html>
