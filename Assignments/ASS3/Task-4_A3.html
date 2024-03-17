@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rock Paper Scissors Game</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<div style="text-align:center;">
+    <h2>Let's Play Rock, Paper, Scissors!</h2>
+    <div id="choices" style="margin: 20px;">
+        <img src="C:\Users\hp\Desktop\rock.png" alt="Rock" class="choice" id="rock" style="width: 100px; cursor: pointer;">
+        <img src="C:\Users\hp\Desktop\paper.png" alt="Paper" class="choice" id="paper" style="width: 100px; cursor: pointer;">
+        <img src="C:\Users\hp\Desktop\scissor.png" alt="Scissors" class="choice" id="scissors" style="width: 100px; cursor: pointer;">
+    </div>
+    <div id="result" style="font-size: 1.5em;"></div>
+</div>
+
+<script>
+    $(document).ready(function() {
+    var userScore = 0;
+    var computerScore = 0;
+    
+    $('.choice').click(function() {
+        var userChoice = this.id;
+        var computerChoice = getComputerChoice();
+        var result = determineWinner(userChoice, computerChoice);
+        updateScore(result);
+        $('#result').html(`<p>Your choice: <strong>${capitalizeFirstLetter(userChoice)}</strong></p>
+                           <p>Computer's choice: <strong>${capitalizeFirstLetter(computerChoice)}</strong></p>
+                           <p><strong>${result}</strong></p>
+                           <p>Your score: ${userScore} | Computer's score: ${computerScore}</p>`);
+    });
+
+    function getComputerChoice() {
+        var choices = ['rock', 'paper', 'scissors'];
+        var randomIndex = Math.floor(Math.random() * 3);
+        return choices[randomIndex];
+    }
+
+    function determineWinner(userChoice, computerChoice) {
+        if (userChoice === computerChoice) {
+            return "It's a tie!";
+        }
+        if ((userChoice === 'rock' && computerChoice === 'scissors') ||
+            (userChoice === 'scissors' && computerChoice === 'paper') ||
+            (userChoice === 'paper' && computerChoice === 'rock')) {
+            return "You win!";
+        }
+        return "You lose!";
+    }
+
+    function updateScore(result) {
+        if (result === "You win!") {
+            userScore++;
+        } else if (result === "You lose!") {
+            computerScore++;
+        }
+    }
+    
+    function capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+});
+
+</script>
+
+</body>
+</html>
