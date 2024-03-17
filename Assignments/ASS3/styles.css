@@ -1,0 +1,39 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f3f3;
+}
+
+#clock {
+    display: flex;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.time-block {
+    padding: 20px;
+    margin: 0 10px;
+    text-align: center;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #08c, #0044cc);
+    color: white;
+}
+
+.time-block#period {
+    background: #0c8;
+}
+
+/* Sample Media Query */
+@media (max-width: 600px) {
+    .time-block {
+        padding: 10px;
+        margin: 0 5px;
+        font-size: 1.5em;
+    }
+}
